@@ -6,11 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "start": "npm run client:build && npm run server",
+    "start": "npm run build && node dist/server.js --ignore client",
     "dev": "npx nodemon",
-    "install": "cd server && npm install && cd ../client && npm install",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "cd server && npm run start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
     "watch": [
